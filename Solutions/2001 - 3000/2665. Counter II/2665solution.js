@@ -27,3 +27,23 @@ var createCounter = function(init) {
  * counter.reset(); // 5
  * counter.decrement(); // 4
  */
+
+// Using Arrow() =>{} function
+var createCounter = function(init) {
+    let count = init;
+    const increment = () =>{
+        return ++count
+    }
+    const decrement = () =>{
+        return --count
+    }
+    const reset = () =>{
+        count = init;
+        return count;
+    }
+    return {
+       increment,
+       decrement,
+       reset
+    }
+};
